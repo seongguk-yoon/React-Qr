@@ -1,22 +1,27 @@
 import { Link } from "react-router-dom";
+import { css } from '@emotion/css';
 
 const Navigation = () => {
   return (
     <nav
-      style={{
-        display: "flex",
-        justifyContent: "space-evenly",
-        alignItems: "center",
-        width: "300px",
-        height: "70px",
-      }}
+      className={css`
+        display: flex;
+        height: 100px;
+        max-width: 400px;
+        justify-items: center;
+        justify-content: space-between;
+      `}
     >
-    <div>
-      <Link to="/">QR 코드</Link>
-    </div>
-    <div>
-      <Link to="/QRscan">QR 스캔</Link>
-    </div>
+      <div>
+        <Link to="/">
+          <h2> QR 코드</h2>
+        </Link>
+      </div>
+      <div>
+        <Link to="/QRscan">
+          <h2> QR 스캔</h2>
+        </Link>
+      </div>
     </nav>
   );
 };

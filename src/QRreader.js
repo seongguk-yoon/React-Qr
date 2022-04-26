@@ -3,7 +3,7 @@ import { QrReader } from "react-qr-reader";
 import { css } from "@emotion/css";
 
 function Qrscantest(props) {
-  const [qrdata, setQrdata] = useState("No result");
+  const [qrdata, setQrdata] = useState("loading...");
   console.log("확인", qrdata);
 
   return (
@@ -17,7 +17,7 @@ function Qrscantest(props) {
       <h1>QR 카메라스캔</h1>
 
       <QrReader
-        // 카메라 전면 전환 , 기기별 지원하는 경우에만 확인가능
+        //   카메라 전면 전환  (environment), 기기별 지원하는 경우에만 확인가능  
         constraints={{ facingMode: "environment" }}
         scanDelay={500}
         containerStyle={{ width: "100%", background: "white" }}

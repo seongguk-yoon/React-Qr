@@ -10,7 +10,7 @@ function Qrcode() {
       <div>
         <QRCode
          value='https://github.com/'
-         style = {{ width : "200px"  , height : "200px"}}
+         style = {{ width : "280px"  , height : "280px"}}
         />
       </div>
      
