@@ -2,6 +2,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  Navigate,
   
 } from "react-router-dom";
 import Main from "./router/main";
@@ -26,6 +27,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="QRscan" element={<Qrscan />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>
     </div>
